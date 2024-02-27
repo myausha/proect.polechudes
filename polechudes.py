@@ -8,10 +8,14 @@ while True:
     user_letter = ' '
     while True:
         missed = 0
-        letter = input('\nВведи букву').lower()
+        letter = input('\nВведи букву или команду').lower()
         popitka += 1
-        if len(letter)>1:
+        if len(letter)>1 and "/" not in letter :
             print('Ты ввел больше чем одну букву и меньше чем само слово')
+        elif '/help' in letter:
+            print('правиолаа')
+        elif '/funny' in letter:
+            print('Второе сентября, начало первого урока, учительница говорит: - Дети, у вас есть еще вопросы? Вовочка: - А когда каникулы?')
         else:
             if letter in user_letter:
                 print('такая буква уже есть')
